@@ -43,7 +43,7 @@ export default async function RootLayout({
           <Toaster
             position="top-right"
             toastOptions={{
-              // Increased default duration slightly so notifications are easier to read
+              // Default duration for informational toasts
               duration: 5000,
               style: {
                 background: "#363636",
@@ -56,8 +56,9 @@ export default async function RootLayout({
                 },
               },
               error: {
-                // Keep errors visible longer since they require attention
-                duration: 8000,
+                // Keep errors visible longer since they require attention;
+                // bumped from 8s to 10s so I actually have time to read them
+                duration: 10000,
                 style: {
                   background: "#ef4444",
                 },
