@@ -43,19 +43,21 @@ export default async function RootLayout({
           <Toaster
             position="top-right"
             toastOptions={{
-              duration: 4000,
+              // Increased default duration slightly so notifications are easier to read
+              duration: 5000,
               style: {
                 background: "#363636",
                 color: "#fff",
               },
               success: {
-                duration: 3000,
+                duration: 4000,
                 style: {
                   background: "#22c55e",
                 },
               },
               error: {
-                duration: 5000,
+                // Keep errors visible longer since they require attention
+                duration: 8000,
                 style: {
                   background: "#ef4444",
                 },
